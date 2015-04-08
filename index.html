@@ -1,0 +1,1254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl">
+			<head>
+				<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+				<meta name="keywords" content="" />
+				<meta name="description" content="" />
+				<title>Idem</title>
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js-lib/jquery-1.8.0.min.js"></script>
+
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/general.css" />
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/new_view.css" />
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/procedury.css" />
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/jquery.selectbox.css" />
+				<link rel="stylesheet" type="text/css" media="print" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/print.css" />
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/jquery-ui-1.9.2.css" />
+				<!--[if lte IE 6]>
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/css-lib/ie.css" />
+				<![endif]-->
+
+				<link rel="stylesheet" type="text/css" href="https://cms.media4u.pl/www.idem.m4u.pl/js/uber_uploader/html/ubr.css" />
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js-lib/general.js?v=201504"></script>
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js/tiny_mce/tiny_mce.js"></script>
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js/uber_uploader/html/jquery.blockUI.js"></script>
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js/uber_uploader/html/ubr_file_upload.js"></script>
+				<script src="https://cms.media4u.pl/www.idem.m4u.pl/js-lib/jquery-ui-1.9.2.js" ></script>
+				<script type="text/javascript">
+					 tinyMCE.init({
+						force_br_newlines : true,
+						force_p_newlines : false,
+						forced_root_block : "",
+						mode : "textareas",
+						editor_selector : "mceAdvanced",
+						theme : "advanced",
+						theme_advanced_buttons1 : "bold,italic,underline, strikethrough, separator,justifyleft, justifycenter,justifyright,  justifyfull, separator,help",
+						theme_advanced_buttons2: "",
+						theme_advanced_buttons3: "",
+						theme_advanced_buttons4: "",
+						theme_advanced_toolbar_location : "top"
+					});
+					var host = "https://cms.media4u.pl/www.idem.m4u.pl/";
+				</script>
+				<script type="text/javascript" src="https://cms.media4u.pl/www.idem.m4u.pl/js-lib/jquery.selectbox-0.6.1.js"></script>
+
+			</head>
+			<body ><div id="menuMain"><span onMouseOver=pokazPodmenu('menu11'); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/worktime.php">Czas pracy</a><span class="menuPooled" id="menu11" onMouseOut='ukryjPodmenu("menu11");'>
+		<ul><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/leaves.php">Urlopy</a></li></ul></span></span><span onMouseOver=pokazPodmenu(""); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/notes.php">Notatnik</a></span><span onMouseOver=pokazPodmenu('menu1'); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/jobs.php">Zlecenia</a><span class="menuPooled" id="menu1" onMouseOut='ukryjPodmenu("menu1");'>
+		<ul><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/tasks_my.php">Moje bieżące zadania</a></li><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/mechanisms.php">Mechanizmy</a></li><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/tasks_my_coordinator.php">Zadania utworzone przeze mnie</a></li></ul></span></span><span onMouseOver=pokazPodmenu(""); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/modclients/clients/index">Klienci</a></span><span onMouseOver=pokazPodmenu('menu5'); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/#">Administracja</a><span class="menuPooled" id="menu5" onMouseOut='ukryjPodmenu("menu5");'>
+		<ul><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/conference_rooms.php">Sale konferencyjne</a></li></ul></span></span><span onMouseOver=pokazPodmenu('menu6'); class="menuMainLeft"><a href="https://cms.media4u.pl/www.idem.m4u.pl/#">Zestawienia</a><span class="menuPooled" id="menu6" onMouseOut='ukryjPodmenu("menu6");'>
+		<ul><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/stats_workers.php">Statystyki godzinowe</a></li><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/stats_categories.php">Statystyki kategorii</a></li><li><a href="https://cms.media4u.pl/www.idem.m4u.pl/stats_my_workers.php">Statystyki działów</a></li></ul></span></span><span onMouseOver=pokazPodmenu(""); class="menuMainRight"><a href="https://cms.media4u.pl/www.idem.m4u.pl/javascript:return false;"><form name="logout" id="logout_old" action="https://cms.media4u.pl/www.idem.m4u.pl/" method="post">
+	<input type="hidden" name="logout" value="1">
+	<input type="button" onclick="check_tasks_inprogress();return false;" value="Wyloguj : Robert Jerzak" style="border: none; background: none; font-weight: bold; display: inline; ">
+</form> </a></span></div>
+		<div id="mainBody"><table class="containerBody"><tr><td class="containerTd">
+<br>
+<script type="text/javascript">
+
+	function akcja(typ, zadanie) {
+
+		document.getElementById(typ).value = zadanie;
+		document.getElementById('uwagi').value = document.getElementById('uwagi_ta').value;
+		document.getElementById('zadaniaForm').submit();
+	}
+
+</script>
+<form action="tasks_my.php" method="post" name="zadaniaForm" id="zadaniaForm">
+	<div class="inp">
+	<label for="nazwa">Pracownik:</label>
+		<select name="id_pracownika">
+			<optgroup label="IT - PHP BP">IT - PHP BP</optgroup>
+		<option value="119" selected>RJER - Robert Jerzak&nbsp;&nbsp;</option>
+		</select>
+	</div>
+
+	<span class="menuLeft">
+	<input name="wyslano" type="submit" class="button" value="Odśwież" />
+	<input type="hidden" name="stop" id="stop" value="">
+	<input type="hidden" name="wstrzymaj" id="wstrzymaj" value="">
+	<input type="hidden" name="uwagi" id="uwagi" value="">
+
+	</span>
+</form>
+<br><br><br>
+
+		<b>Robert Jerzak</b><br><br>
+
+		<table class="tableMain" style="width:100%;">
+		<tr>
+			<th class="tableHeader">Lp.</th>
+			<th class="tableHeader">Zlecenie</th>
+			<th class="tableHeader" id="zad_no_del">Zadanie</th>
+			<th class="tableHeader">Zadanie od</th>
+			<th class="tableHeader">Rozp. nie wcześniej</th>
+			<th class="tableHeader">Deadline</th>
+			<th class="tableHeader">Data dodania</th>
+			<th class="tableHeader">Przepracowano</th>
+			<th class="tableHeader">Zaplanowano</th>
+			<th class="tableHeader">Progress</th>
+			<th class="tableHeader">Status</th>
+			<th class="tableHeader">Akcja</th>
+		</tr>
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-04-08 - Środa</td></tr>		<tr style="background: #EEF3D1">
+		<td class="tableBody" style="width:30px;text-align:center;">1</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26666&back=tasks_my.php';"><b>
+		K-4503-2-10</b>, klient: <b>bonprix-gr</b><br>Skrypty, feedy itp.</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=71090">
+Usuwanie produktów bez promocji z kategorii SALE </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Maciej Boczek/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-08<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-04-07 14:59:34</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b>1 godz. 10 min.</b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress2" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+nowe</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div></div>		</td>
+	</tr>
+		</td>
+	</tr>
+
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-04-17 - Piątek</td></tr>		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">2</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=27359&back=tasks_my.php';"><b>
+		W-4435-3-2</b>, klient: <b>Media4U Sp. z o.o.</b><br>Przygotowania i wdrożenia sprites4u</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=70796">
+* Prace nad sprtite4u . </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Tomasz Knaur/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-17<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-03-31 08:56:20</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>25 godz. 12 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557565">
+					<span class="edit_praca_od">2015-04-08 10:44:23</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557565">
+					<span class="edit_praca_do">2015-04-08 11:06:51</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557475">
+					<span class="edit_praca_od">2015-04-08 08:23:55</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557475">
+					<span class="edit_praca_do">2015-04-08 09:50:11</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557397">
+					<span class="edit_praca_od">2015-04-07 16:50:37</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557397">
+					<span class="edit_praca_do">2015-04-07 16:56:44</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557149">
+					<span class="edit_praca_od">2015-04-07 09:40:55</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557149">
+					<span class="edit_praca_do">2015-04-07 10:34:16</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557006">
+					<span class="edit_praca_od">2015-04-03 14:49:59</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557006">
+					<span class="edit_praca_do">2015-04-03 15:10:46</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556801">
+					<span class="edit_praca_od">2015-04-03 10:07:46</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556801">
+					<span class="edit_praca_do">2015-04-03 14:37:30</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556558">
+					<span class="edit_praca_od">2015-04-02 13:45:36</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556558">
+					<span class="edit_praca_do">2015-04-02 16:49:53</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556442">
+					<span class="edit_praca_od">2015-04-02 09:56:52</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556442">
+					<span class="edit_praca_do">2015-04-02 13:18:59</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556140">
+					<span class="edit_praca_od">2015-04-01 14:06:59</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556140">
+					<span class="edit_praca_do">2015-04-01 16:10:16</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556071">
+					<span class="edit_praca_od">2015-04-01 12:03:10</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556071">
+					<span class="edit_praca_do">2015-04-01 13:48:53</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555859">
+					<span class="edit_praca_od">2015-04-01 08:22:33</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555859">
+					<span class="edit_praca_do">2015-04-01 09:30:33</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555622">
+					<span class="edit_praca_od">2015-03-31 16:16:55</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555622">
+					<span class="edit_praca_do">2015-03-31 16:37:20</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555584">
+					<span class="edit_praca_od">2015-03-31 15:48:54</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555584">
+					<span class="edit_praca_do">2015-03-31 16:12:23</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555477">
+					<span class="edit_praca_od">2015-03-31 14:48:16</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555477">
+					<span class="edit_praca_do">2015-03-31 15:47:18</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555464">
+					<span class="edit_praca_od">2015-03-31 14:38:12</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555464">
+					<span class="edit_praca_do">2015-03-31 14:47:19</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555218">
+					<span class="edit_praca_od">2015-03-31 09:41:01</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555218">
+					<span class="edit_praca_do">2015-03-31 14:04:02</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-04-30 - Czwartek</td></tr>		<tr style="background: #EEF3D1">
+		<td class="tableBody" style="width:30px;text-align:center;">3</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=27380&back=tasks_my.php';"><b>
+		K-4554-3-1</b>, klient: <b>Bonprix CZ - Euronova</b><br>Prace bieżące</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=70927">
+Bieżące </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Kamil Olejniczak/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-30<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-03-31 19:05:22</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+nowe</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div></div>		</td>
+	</tr>
+		</td>
+	</tr>
+
+		<tr style="background: #EEF3D1">
+		<td class="tableBody" style="width:30px;text-align:center;">4</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26818&back=tasks_my.php';"><b>
+		K-4504-22-3</b>, klient: <b>BON PRIX SP. Z O.O.</b><br>Prace informatyczne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=67921">
+Migracja, testy, statusowanie powiadomień wysyłanych na podstawie wsadów EDV </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Arkadiusz Miłek/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-30<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-01-08 11:33:30</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+nowe</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div></div>		</td>
+	</tr>
+		</td>
+	</tr>
+
+		<tr style="background:#a2dced">
+		<td class="tableBody" style="width:30px;text-align:center;">5</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26774&back=tasks_my.php';"><b>
+		K-4504-41-2</b>, klient: <b>BON PRIX SP. Z O.O.</b><br>Prace informatyczne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=70895">
+Kwiecień 2015: Support wewnętrzny, prace konserwacyjne, bieżące, dumpy, pomoc techniczna, wsparcie przy testach, drobne poprawki. </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Emilia Bednarz/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-30<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-03-31 15:43:52</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>4 godz. 26 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+wykonywane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">^</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style=";text-align:right"><td colspan="7" style="">
+
+		</td></tr>
+		</td>
+	</tr>
+
+		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">6</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26807&back=tasks_my.php';"><b>
+		K-4504-18-3</b>, klient: <b>BON PRIX SP. Z O.O.</b><br>Prace informatyczne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=70633">
+Video produktowe z niemieckiego FTP </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Arkadiusz Miłek/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-04-30<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-03-25 11:45:04</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>9 godz. 1 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557578">
+					<span class="edit_praca_od">2015-04-08 11:07:01</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557578">
+					<span class="edit_praca_do">2015-04-08 11:14:51</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557547">
+					<span class="edit_praca_od">2015-04-08 10:11:42</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557547">
+					<span class="edit_praca_do">2015-04-08 10:44:20</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557337">
+					<span class="edit_praca_od">2015-04-07 15:20:51</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557337">
+					<span class="edit_praca_do">2015-04-07 16:44:59</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557174">
+					<span class="edit_praca_od">2015-04-07 10:36:52</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557174">
+					<span class="edit_praca_do">2015-04-07 15:04:43</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557134">
+					<span class="edit_praca_od">2015-04-07 09:10:24</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557134">
+					<span class="edit_praca_do">2015-04-07 09:40:51</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557118">
+					<span class="edit_praca_od">2015-04-07 08:49:34</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557118">
+					<span class="edit_praca_do">2015-04-07 08:53:56</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557018">
+					<span class="edit_praca_od">2015-04-03 15:15:45</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557018">
+					<span class="edit_praca_do">2015-04-03 17:12:50</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-05-29 - Piątek</td></tr>		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">7</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26807&back=tasks_my.php';"><b>
+		K-4504-18-3</b>, klient: <b>BON PRIX SP. Z O.O.</b><br>Prace informatyczne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=70632">
+Monitoring update </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Arkadiusz Miłek/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-05-29<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-03-25 11:38:17</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>5 godz. 20 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554711">
+					<span class="edit_praca_od">2015-03-27 15:51:28</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554711">
+					<span class="edit_praca_do">2015-03-27 16:05:13</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554586">
+					<span class="edit_praca_od">2015-03-27 13:21:52</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554586">
+					<span class="edit_praca_do">2015-03-27 15:50:42</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554522">
+					<span class="edit_praca_od">2015-03-27 11:04:36</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554522">
+					<span class="edit_praca_do">2015-03-27 11:54:37</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554498">
+					<span class="edit_praca_od">2015-03-27 10:19:51</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554498">
+					<span class="edit_praca_do">2015-03-27 10:58:47</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554337">
+					<span class="edit_praca_od">2015-03-26 14:25:53</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554337">
+					<span class="edit_praca_do">2015-03-26 15:37:02</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-06-30 - Wtorek</td></tr>		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">8</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26948&back=tasks_my.php';"><b>
+		W-4520-2</b>, klient: <b>Media4U Sp. z o.o.</b><br>Spotknia wewnętrzne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=68236">
+* Spotkania wewnętrzne  </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Tomasz Knaur/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-06-30<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-01-15 12:48:54</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>2 godz. 36 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557324">
+					<span class="edit_praca_od">2015-04-07 15:04:46</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557324">
+					<span class="edit_praca_do">2015-04-07 15:18:23</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557172">
+					<span class="edit_praca_od">2015-04-07 10:34:28</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557172">
+					<span class="edit_praca_do">2015-04-07 10:36:50</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="553590">
+					<span class="edit_praca_od">2015-03-24 12:58:32</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="553590">
+					<span class="edit_praca_do">2015-03-24 13:39:35</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="552562">
+					<span class="edit_praca_od">2015-03-19 12:02:32</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="552562">
+					<span class="edit_praca_do">2015-03-19 12:38:42</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="548888">
+					<span class="edit_praca_od">2015-03-04 16:19:03</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="548888">
+					<span class="edit_praca_do">2015-03-04 16:35:44</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="546814">
+					<span class="edit_praca_od">2015-02-25 16:59:29</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="546814">
+					<span class="edit_praca_do">2015-02-25 17:22:25</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="544501">
+					<span class="edit_praca_od">2015-02-16 12:22:50</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="544501">
+					<span class="edit_praca_do">2015-02-16 12:43:15</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="538465">
+					<span class="edit_praca_od">2015-01-26 11:08:58</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="538465">
+					<span class="edit_praca_do">2015-01-26 11:15:34</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">9</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=26765&back=tasks_my.php';"><b>
+		K-4504-14-3</b>, klient: <b>BON PRIX SP. Z O.O.</b><br>Prace informatyczne</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=67822">
+Support dla Mailcraft/tracking2 - prace dla bonprix </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Damian Kondal/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-06-30<br><span style="font-weight: bold">17:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-01-05 11:23:24</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>4 godz. 14 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b>40 godz. 0 min.</b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress2" style="min-width:20px;width: 11%;" nowrap>11%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557122">
+					<span class="edit_praca_od">2015-04-07 08:54:12</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="557122">
+					<span class="edit_praca_do">2015-04-07 09:10:22</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555968">
+					<span class="edit_praca_od">2015-04-01 10:22:00</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555968">
+					<span class="edit_praca_do">2015-04-01 12:03:06</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555621">
+					<span class="edit_praca_od">2015-03-31 16:12:27</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555621">
+					<span class="edit_praca_do">2015-03-31 16:16:41</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555395">
+					<span class="edit_praca_od">2015-03-31 14:04:06</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="555395">
+					<span class="edit_praca_do">2015-03-31 14:23:08</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554457">
+					<span class="edit_praca_od">2015-03-27 09:18:17</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554457">
+					<span class="edit_praca_do">2015-03-27 10:16:45</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554388">
+					<span class="edit_praca_od">2015-03-26 16:19:11</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="554388">
+					<span class="edit_praca_do">2015-03-26 16:24:02</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="549916">
+					<span class="edit_praca_od">2015-03-09 15:14:43</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="549916">
+					<span class="edit_praca_do">2015-03-09 15:35:32</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="541819">
+					<span class="edit_praca_od">2015-02-05 14:25:00</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="541819">
+					<span class="edit_praca_do">2015-02-05 14:29:43</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="541760">
+					<span class="edit_praca_od">2015-02-05 12:33:07</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="541760">
+					<span class="edit_praca_do">2015-02-05 13:31:27</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="536416">
+					<span class="edit_praca_od">2015-01-16 14:07:52</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="536416">
+					<span class="edit_praca_do">2015-01-16 14:11:47</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+<tr><td class="tableHeader" colspan="10" style="background-color:#cdcdcd;line-height: 13px;border:1px solid #cdcdcd;">2015-12-31 - Czwartek</td></tr>		<tr style="background: #fdf4dd ">
+		<td class="tableBody" style="width:30px;text-align:center;">10</td>
+		<td class="tableBody" style="width:270px;" onclick="document.location.href='jobs_show.php?id=27400&back=tasks_my.php';"><b>
+		K-4513-4-2</b>, klient: <b>bonprix-gr</b><br>Bieżące_kwiecień_2015</td>
+		<td class="tableBody">		<a style="text-decoration: none" href="task_show.php?id_zadania=71035">
+Prośba o przywrócenie ostatniego poprawnego stock update na Grecji </a>
+		</td>
+		<td class="tableBody" style="width:150px;text-align:center;">Maciej Boczek/Tomasz Knaur</td>
+
+
+		<td class="tableBody" style="width:110px;text-align:center;"></td>
+		<td class="tableBody" style="width:70px;text-align:center; background-color: white;">
+2015-12-31<br><span style="font-weight: bold">16:00:00</span>		</td>
+
+		<td class="tableBody" style="width:110px;text-align:center;">2015-04-03 09:38:10</td>
+
+		<td class="tableBody" style="width:100px;text-align:center;"><b>0 godz. 7 min.</b></td>
+		<td class="tableBody" style="width:100px;text-align:center;"><b></b></td>
+		<td class="tableBody"  style="width:91px;">
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td style="width:98px;" class="progress" valign="top">
+		<div class="progress" style="width: 0%;" nowrap>%</div>
+		</td></tr></table>
+		</td>
+		<td class="tableBody" style="width:80px;text-align:center;line-height:12px;">
+
+		<br>
+przerwane</td>
+		<td class="tableBody" style="width:100px; text-align: center">
+<div class="slide_rows" style="font-weight: bold; cursor: pointer;">v</div><div></div>		</td>
+	</tr>
+			<tr class="slide_notes" style="display: none;text-align:right"><td colspan="7" style="">
+		<table style="margin:4px 0 4px 0;">
+			<tr>
+			<td class="tableBody" style="line-height:20px;width:150px;text-align:center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556780">
+					<span class="edit_praca_od">2015-04-03 09:40:43</span>
+				</span>
+			</td>
+			<td class="tableBody" style="line-height: 20px; width: 150px; text-align: center;">
+				<span class="edytuj_czas">
+					<input type='hidden' name='ajaxCall' value="ChangeTimeOfWork">
+					<input type="hidden" name="id_notatki" value="556780">
+					<span class="edit_praca_do">2015-04-03 09:48:08</span>
+				</span>
+			</td><td class="tableBody" style="line-height: 20px; width: 600px; text-align: left; color: #000000;"> </td>
+					</tr>
+		</table>
+		</td></tr>
+		</td>
+	</tr>
+
+</table>
+
+
+</table></div>
+
+		<div id="mainFooter">
+		<table class="containerFooter">
+		<tr><td></td><td style="text-align:right;">08-04-2015 11:40&nbsp;&nbsp;</td></tr>
+		</table>
+		</div>
+		</table>
+
+		<!-- addon scripts -->
+		<script type="text/javascript" src="data/libs/jquery.js"></script>
+		<script type="text/javascript" src="data/libs/noty.js"></script>
+		<script type="text/javascript" src="data/libs/moments.js"></script>
+		<script type="text/javascript" src="data/libs/moments-locales.js"></script>
+		<script type="text/javascript" src="data/libs/config.js"></script>
+		<script type="text/javascript" src="data/libs/ticket.js"></script>
+		<script type="text/javascript" src="data/libs/tickets_view.js"></script>
+		<script type="text/javascript" src="data/main.js"></script>
+
+
+		</body>
+		</html>

@@ -21,7 +21,9 @@ var TicketsView = function(tickets){
   };
 
   this.printView = function(){
+    this.clearAlerts();
     var $ul = $("<ul/>");
+    var isTicketsWithTimeLimit = false;
     for(var i in this.tickets){
       var ticket = that.tickets[i];
       $ul.append("<li>" + ticket.getInfo() + "</li>");
@@ -31,7 +33,20 @@ var TicketsView = function(tickets){
       }
       if(ticket.isAfterDeadline()){
         var msg = "Przekroczono termin zadania<br/> " + ticket.getTitle();
-        that.showAlert(msg,"warning");
+        that.showAlert(msg,"error");
+      }
+      if(ticket.isTicketWithTimeLimit()){
+        isTicketsWithTimeLimit = true;
+      }
+    }
+    if(isTicketsWithTimeLimit){
+      this.showAlert("====================<br/>Tickety z limitem czasu:<br/>====================","warning");
+      for(var i in this.tickets){
+        var ticket = that.tickets[i];
+        if(ticket.isTicketWithTimeLimit()){
+          var timeLimitInfo = ticket.getTimeLimitInfo();
+          that.showAlert(timeLimitInfo.msg,timeLimitInfo.type);
+        }
       }
     }
     that.$viewEl.append($ul);
@@ -42,6 +57,10 @@ var TicketsView = function(tickets){
         text: msg,
         type: type
     });
+  }
+
+  this.clearAlerts = function(){
+    $.noty.closeAll();
   }
 
   //auto init

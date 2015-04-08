@@ -3,7 +3,9 @@ function getAllTickets(rows){
   rows.each(function(){
     var deadlineEl = $(this).children().eq(config.deadlineIndex);
     var ticketTitle = $(this).children().eq(config.ticketTitleIndex);
-    _tickets.push(new Ticket(deadlineEl,ticketTitle));
+    var limitTime = $(this).children().eq(config.limitTimeIndex);
+    var usedLimitTime = $(this).children().eq(config.limitUsedTimeIndex); 
+    _tickets.push(new Ticket(deadlineEl,ticketTitle,limitTime,usedLimitTime));
   });
   return _tickets;
 }
