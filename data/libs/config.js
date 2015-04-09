@@ -7,6 +7,6 @@ var config = {
   limitTimeIndex:8,
   ticketTitleIndex:2,
   filteredColors: ["#a2dced","#fdf4dd","#EEF3D1"],
-  hoursAlarmLimit:208,
-  minuteAlarmLimit:161
+  hoursAlarmLimit:9,
+  minuteAlarmLimit:61
 }
